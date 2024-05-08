@@ -38,7 +38,7 @@ int main()
         }
         printf("\n");
         if(a[i][2] < 60 && a[i][2] >=0){
-            printf("O aluno [%d] tirou a nota %d e ele esta re  provado\n", i+1 , a[i][2]);
+            printf("O aluno [%d] tirou a nota %d e ele esta reprovado\n", i+1 , a[i][2]);
         }
     }
 
