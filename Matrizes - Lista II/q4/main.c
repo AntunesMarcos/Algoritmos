@@ -3,7 +3,7 @@
 
 int main()
 {
-    int a[10][3]={0};
+    int a[10][3]={0}, maior=0;
 
     for(int i = 0; i < 10; i++){
         for(int j = 0; j < 1; j++){
@@ -14,6 +14,8 @@ int main()
         for(int j = 0; j < 1; j++){
             printf("informe a nota do aluno[%d] do  trabalho [%d]: ", i+1, j+1);
             scanf("%d", &a[i][1]);
+
+            a[i][2] = a[i][0] + a[i][1];
         }
 
 
@@ -22,8 +24,14 @@ int main()
         printf("\n\n");
     }
 
+
+    maior = a[0][2];
+
     for(int i = 0; i < 10; i++){
-        a[i][2] = a[i][0] + a[i][1];
+
+        if(a[i][2] > maior){
+            maior = a[i][2];
+        }
 
         if(a[i][2] >= 60){
             printf("O aluno [%d] tirou a nota %d e ele esta aprovado\n", i+1 , a[i][2]);
@@ -45,7 +53,13 @@ int main()
         }
         printf("\n");
     }
+    printf("\n\n");
 
+    for(int i = 0; i < 10; i++){
+        if(a[i][2] == maior){
+            printf("A maior nota foi %d do aluno[%d]", maior, i+1);
+        }
+    }
 
     return 0;
 }
