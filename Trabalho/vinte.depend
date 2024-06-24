@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1718974937 source:c:\users\perei\desktop\aeds f\vinte\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<time.h>
+
